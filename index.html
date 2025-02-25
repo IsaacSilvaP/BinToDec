@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>BinToDec</title>
+        <link rel="stylesheet" href="style.css" />
+    </head>
+    <body>
+        <div class="container">
+            <h1>Conversor Decimal-Binário</h1>
+
+            <div class="radio-group">
+                <label class="radio-option">
+                    <input type="radio" name="conversion-type" value="decimal-to-binary" checked />
+                    Decimal → Binário
+                </label>
+                <label class="radio-option">
+                    <input type="radio" name="conversion-type" value="binary-to-decimal" />
+                    Binário → Decimal
+                </label>
+            </div>
+
+            <div class="input-group">
+                <label for="input-number">Digite o número:</label>
+                <input type="text" id="input-number" placeholder="Ex: 42.75 ou 101010.11" />
+            </div>
+
+            <button id="convert-btn">Converter</button>
+
+            <div class="result-container">
+                <h3>Resultado:</h3>
+                <div class="result" id="result">--</div>
+            </div>
+
+            <button id="show-steps-btn" style="display: none">Mostrar Passos</button>
+        </div>
+
+        <div class="modal" id="steps-modal">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h2>Passo a Passo da Conversão</h2>
+                    <button class="close-modal" id="close-modal">×</button>
+                </div>
+                <div class="steps-container" id="steps-container">// Lista de passos aqui</div>
+            </div>
+        </div>
+    </body>
+    <script src="script.js"></script>
+</html>
